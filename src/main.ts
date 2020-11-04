@@ -9,17 +9,15 @@ export class Runner {
   private options: Object;
   private app: Koa;
   constructor(opts: Object) {
-    const _initOpts = {
-    };
+    const _initOpts = {};
     let options = Object.create(null);
-    const keys = Object.keys(opts)
+    const keys = Object.keys(opts);
     if (keys.length > 0) {
       options = Object.assign(options, _initOpts, opts);
     } else {
       options = Object.assign(options, _initOpts);
     }
     this.options = options;
-    // console.log(Koa);
     this.app = new Koa();
   }
   public launch = () => {
@@ -30,7 +28,7 @@ export class Runner {
 
   private setCors = () => {
     this.app.use(async (ctx, next) => {
-      ctx.set('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With')
+      ctx.set('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With');
       ctx.set('Access-Control-Allow-Origin', 'http://localhost:9000');
       ctx.set('Access-Control-Allow-Methods', 'PUT,DELETE,POST,GET');
       ctx.set('Access-Control-Allow-Credentials', true);
