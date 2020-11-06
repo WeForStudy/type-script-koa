@@ -24,7 +24,6 @@ export class Injecter {
 
   constructor() {
     this.router = new Router();
-    console.log(this.router);
   }
 
   inject() {

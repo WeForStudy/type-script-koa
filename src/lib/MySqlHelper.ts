@@ -49,7 +49,7 @@ export class MySQLHelper {
   private setPool() {
     if (!this.initialized) {
       this.pool = mysql.createPool({
-        hots    : CONFIG.DB.HOST,
+        host    : CONFIG.DB.HOST,
         user    : CONFIG.DB.USER,
         password: CONFIG.DB.PASSWORD,
         database: CONFIG.DB.DATABASE,

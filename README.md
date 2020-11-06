@@ -7,6 +7,10 @@
 3. change the config of database to your own
   > src/config/default .DB
 
-4. use a terminal tab to `npm run start`
+4. run `tsc -w`
 
-5. input the api url in the broswer address
+5. run `cd build`
+
+6. use a terminal tab to `npm run start`
+
+7. input the api url in the broswer address
